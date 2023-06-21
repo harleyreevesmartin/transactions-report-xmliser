@@ -45,10 +45,18 @@ def generate_enriched_transactions_data(transactions_data: List[Dict]) -> List[D
     for transaction in transactions_data:
         enriched_transaction_data = transaction.copy()
 
-        enriched_transaction_data["Buyer"] = counterparties_info[transaction["BuyerLEI"]]
+        if counterparties_info[transaction["BuyerLEI"]]:
+            enriched_transaction_data["Buyer"] = counterparties_info[transaction["BuyerLEI"]]
+        else:
+            enriched_transaction_data["Buyer"] = {"LEI": transaction["BuyerLEI"]}
+
         enriched_transaction_data.pop("BuyerLEI")
 
-        enriched_transaction_data["Seller"] = counterparties_info[transaction["SellerLEI"]]
+        if counterparties_info[transaction["SellerLEI"]]:
+            enriched_transaction_data["Seller"] = counterparties_info[transaction["SellerLEI"]]
+        else:
+            enriched_transaction_data["Seller"] = {"LEI": transaction["SellerLEI"]}
+
         enriched_transaction_data.pop("SellerLEI")
 
         enriched_transactions_data.append(enriched_transaction_data)
