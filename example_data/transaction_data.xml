@@ -1,0 +1,65 @@
+<transactions>
+  <transaction>
+    <Buyer>
+      <LEI>391200DS0MMBJ83WCQ35</LEI>
+      <LastUpdatedDate>2022-08-31T15:46:21Z</LastUpdatedDate>
+      <LegalName>Blackstone GmbH</LegalName>
+      <RegistrationDate>2020-09-01T11:36:44Z</RegistrationDate>
+    </Buyer>
+    <Date>2023-06-20</Date>
+    <PricePerUnit>20.00</PricePerUnit>
+    <Quantity>500</Quantity>
+    <SecuritiesType>Stock</SecuritiesType>
+    <Seller>
+      <LEI>213800LBQA1Y9L22JB70</LEI>
+      <LastUpdatedDate>2022-07-07T16:50:07Z</LastUpdatedDate>
+      <LegalName>BARCLAYS PLC</LegalName>
+      <RegistrationDate>2014-07-25T00:00:00Z</RegistrationDate>
+    </Seller>
+    <Time>09:30:00</Time>
+    <TransactionID>001</TransactionID>
+    <Type>Buy</Type>
+  </transaction>
+  <transaction>
+    <Buyer>
+      <LEI>8I5DZWZKVSZI1NUHU748</LEI>
+      <LastUpdatedDate>2022-11-23T16:26:42Z</LastUpdatedDate>
+      <LegalName>JPMORGAN CHASE &amp; CO.</LegalName>
+      <RegistrationDate>2012-06-06T15:53:00Z</RegistrationDate>
+    </Buyer>
+    <Date>2023-06-20</Date>
+    <PricePerUnit>100.00</PricePerUnit>
+    <Quantity>1000</Quantity>
+    <SecuritiesType>Bond</SecuritiesType>
+    <Seller>
+      <LEI>5299004LW4QWGZUB8Y96</LEI>
+      <LastUpdatedDate>2022-08-26T14:57:45Z</LastUpdatedDate>
+      <LegalName>Blackstone Inc.</LegalName>
+      <RegistrationDate>2018-11-23T07:43:14Z</RegistrationDate>
+    </Seller>
+    <Time>10:15:00</Time>
+    <TransactionID>002</TransactionID>
+    <Type>Sell</Type>
+  </transaction>
+  <transaction>
+    <Buyer>
+      <LEI>549300ZYCD4H1RJY3W10</LEI>
+      <LastUpdatedDate>2023-01-10T21:31:00Z</LastUpdatedDate>
+      <LegalName>HELLMAN &amp; FRIEDMAN LLC</LegalName>
+      <RegistrationDate>2020-01-17T15:32:00Z</RegistrationDate>
+    </Buyer>
+    <Date>2023-06-20</Date>
+    <PricePerUnit>50.00</PricePerUnit>
+    <Quantity>200</Quantity>
+    <SecuritiesType>Derivative</SecuritiesType>
+    <Seller>
+      <LEI>549300CWUTEDC3CFJ739</LEI>
+      <LastUpdatedDate>2022-12-19T21:31:00Z</LastUpdatedDate>
+      <LegalName>Goldman Sachs LLC</LegalName>
+      <RegistrationDate>2013-03-12T17:32:00Z</RegistrationDate>
+    </Seller>
+    <Time>11:50:00</Time>
+    <TransactionID>003</TransactionID>
+    <Type>Buy</Type>
+  </transaction>
+</transactions>

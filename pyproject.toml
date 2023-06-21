@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "regulatory-report-xmlizer"
+version = "0.1.0"
+description = ""
+authors = ["harley-rm <harleyreevesmartin@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+argparse = "1.4.0"
+pandas = "2.0.2"
+lxml = "^4.9.2"
+requests = "^2.31.0"
+dict2xml = "^1.7.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+xmlise = "src.cli:main"
