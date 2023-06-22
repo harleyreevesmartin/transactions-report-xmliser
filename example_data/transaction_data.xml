@@ -62,4 +62,46 @@
     <TransactionID>003</TransactionID>
     <Type>Buy</Type>
   </transaction>
+  <transaction>
+    <Buyer>
+      <LEI>213800LBQA1Y9L22JB70</LEI>
+      <LastUpdatedDate>2022-07-07T16:50:07Z</LastUpdatedDate>
+      <LegalName>BARCLAYS PLC</LegalName>
+      <RegistrationDate>2014-07-25T00:00:00Z</RegistrationDate>
+    </Buyer>
+    <Date>2023-06-20</Date>
+    <PricePerUnit>25.00</PricePerUnit>
+    <Quantity>2000</Quantity>
+    <SecuritiesType>Derivative</SecuritiesType>
+    <Seller>
+      <LEI>MXNTE4GH7BW81YELH558</LEI>
+      <LastUpdatedDate>2023-05-18T15:41:20Z</LastUpdatedDate>
+      <LegalName>FIDELITY INVESTMENT TRUST</LegalName>
+      <RegistrationDate>2012-06-06T15:53:00Z</RegistrationDate>
+    </Seller>
+    <Time>11:54:00</Time>
+    <TransactionID>004</TransactionID>
+    <Type>Buy</Type>
+  </transaction>
+  <transaction>
+    <Buyer>
+      <LEI>213800LBQA1Y9L22JB70</LEI>
+      <LastUpdatedDate>2022-07-07T16:50:07Z</LastUpdatedDate>
+      <LegalName>BARCLAYS PLC</LegalName>
+      <RegistrationDate>2014-07-25T00:00:00Z</RegistrationDate>
+    </Buyer>
+    <Date>2023-06-20</Date>
+    <PricePerUnit>100.00</PricePerUnit>
+    <Quantity>50</Quantity>
+    <SecuritiesType>Derivative</SecuritiesType>
+    <Seller>
+      <LEI>MXNTE4GH7BW81YELH558</LEI>
+      <LastUpdatedDate>2023-05-18T15:41:20Z</LastUpdatedDate>
+      <LegalName>FIDELITY INVESTMENT TRUST</LegalName>
+      <RegistrationDate>2012-06-06T15:53:00Z</RegistrationDate>
+    </Seller>
+    <Time>12:20:00</Time>
+    <TransactionID>005</TransactionID>
+    <Type>Buy</Type>
+  </transaction>
 </transactions>
