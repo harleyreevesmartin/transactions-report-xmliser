@@ -1,6 +1,9 @@
+import logging
 import requests
 
 from typing import Dict, List
+
+logger = logging.getLogger("xmliserlogger")
 
 def get_counterparties_info(leis: List[str]) -> Dict[str, Dict]:
     """
@@ -20,6 +23,7 @@ def fetch_and_extract_counterparty_info(lei: str) -> Dict:
     base_url = "https://api.gleif.org/api/v1/lei-records"
     response = requests.get(f"{base_url}/{lei}", timeout=10)
     if response.status_code == 200:
+        logger.info("Succesfully retrieved info for LEI '%s'", lei)
         counterparty_info = response.json()
         extracted_data = {
             "LEI": lei,
@@ -29,7 +33,7 @@ def fetch_and_extract_counterparty_info(lei: str) -> Dict:
         }
         return extracted_data
     else:
-        print(f"Could not retrieve info for LEI {lei}")
+        logger.warning("Could not retrieve info for LEI '%s'", lei)
 
 def generate_enriched_transactions_data(transactions_data: List[Dict]) -> List[Dict]:
     """Generate a list of enriched transactions data from a list of transactions data."""
@@ -48,6 +52,7 @@ def generate_enriched_transactions_data(transactions_data: List[Dict]) -> List[D
         if counterparties_info[transaction["BuyerLEI"]]:
             enriched_transaction_data["Buyer"] = counterparties_info[transaction["BuyerLEI"]]
         else:
+            logger.warning("Could not find additional information associated with LEI '%s', will only include LEI number in final output.", transaction["BuyerLEI"])
             enriched_transaction_data["Buyer"] = {"LEI": transaction["BuyerLEI"]}
 
         enriched_transaction_data.pop("BuyerLEI")
@@ -55,6 +60,7 @@ def generate_enriched_transactions_data(transactions_data: List[Dict]) -> List[D
         if counterparties_info[transaction["SellerLEI"]]:
             enriched_transaction_data["Seller"] = counterparties_info[transaction["SellerLEI"]]
         else:
+            logger.warning("Could not find additional information associated with LEI '%s', will only include LEI number in final output.", transaction["SellerLEI"])
             enriched_transaction_data["Seller"] = {"LEI": transaction["SellerLEI"]}
 
         enriched_transaction_data.pop("SellerLEI")
